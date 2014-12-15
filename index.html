@@ -6,29 +6,58 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>Hugo Nascimento</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/main.css">
+        <!--<link rel="stylesheet" href="css/normalize.min.css">-->
+        <link rel="stylesheet/less" type="text/css" href="css/main.less">
 
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <!--<script src="js/vendor/modernizr-2.6.2.min.js"></script>-->
+        <script src="js/vendor/less.js" ></script>
+
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        
+        <header>
+            <div class="overlayed">
+                <nav>
+                    <ul>
+                        <li><a href="">About Me</a></li>
+                        <li><a href="">Portfolio</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </nav> 
 
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+                <h1>UX/UI Designer & Front-End Developer</h1>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+                <p class="kicker">I am a Software Engineer with a strong passion for Web Development</p>
 
+            </div>
+        </header>
+
+        <footer>
+            <div class="f-wrapper">
+                <a href="http://plus.google.com/110736213063051570572" title="Google Plus Profile" class="icon-gplus"/></a>
+                <a href="http://twitter.com/hugohcn" title="Twitter Profile" class="icon-twitter"></a>
+                <a href="https://br.linkedin.com/in/hugohcn" title="Linkedin Profile" class="icon-linkedin"></a>
+                <a href="https://github.com/hugohcn" title="Github Profile" class="icon-github"></a>
+                
+                <p>&copy; Copyright 2014 - Hugo Nascimento</p>
+            </div>
+        </footer>
+        
+
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>-->
+        
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -36,6 +65,7 @@
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
+        </script>-->
+        <!-- ADD G ANALYTICS :: DONT FORGET -->
     </body>
 </html>
