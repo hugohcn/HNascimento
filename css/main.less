@@ -5,43 +5,7 @@
  */
 
 @import "grid";
-
-/*Font-face imports*/
-@font-face {
-  font-family: 'Maven Pro';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Maven Pro Bold'), local('MavenProBold'), url(http://fonts.gstatic.com/s/mavenpro/v7/uDssvmXgp7Nj3i336k_dSjy24DTBG-RpCwXaYkM4aks.woff2) format('woff2');
-}
-
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Raleway Bold'), local('Raleway-Bold'), url(http://fonts.gstatic.com/s/raleway/v9/JbtMzqLaYbbbCL9X6EvaIyEAvth_LlrfE80CYdSH47w.woff2) format('woff2');
-}
-
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Raleway Light'), local('Raleway-Light'), url(http://fonts.gstatic.com/s/raleway/v9/-_Ctzj9b56b8RgXW8FAriSEAvth_LlrfE80CYdSH47w.woff2) format('woff2');
-}
-
-@font-face {
-  font-family: 'Advent Pro';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Advent Pro SemiBold'), local('AdventPro-SemiBold'), url(http://fonts.gstatic.com/s/adventpro/v4/3Jo-2maCzv2QLzQBzaKHV5oC_GVDKByywglFLwnuOZY.woff2) format('woff2');
-}
-
-//Variables
-@white-background: #fffeff;
-@gray-background: #f9f9f9;
-@green: #00bd9d;
-@dark-blue: #234457;
-@tittle-top-size-padding: 60px;
-@content-top-padding-size: 50px;
+@import "default";
 
 //Styles
 body{
@@ -59,28 +23,24 @@ header{
     background: url(../images/new-york.jpg) center center;
     background-size: cover;
     height: 495px;
+
     nav{
         .column(12);
         text-align: right;
         margin-top: 25px;
         font-family: 'Advent Pro', sans-serif;
         ul{
-            margin: 0;
-            padding: 0;
-            border: 0;
+            .item-reset;
             li{
                 display: inline-block;
                 margin-left: 57px;
 
                 a{
-                    color: rgba(255,255,255, 0.8);
-                    text-transform: uppercase;
-                    font-weight: 600;
-                    font-size: 18px;
-                    text-decoration: none;
+                    .text-definition(18px, 400, Advent Pro, rgba(255,255,255, 0.8),uppercase, center, 0.05em, 40px);
                 
                     &:hover{
                         color: rgba(255,255,255, 1);
+                        font-weight: 700;
                     }
                 }
             }
@@ -89,293 +49,366 @@ header{
 
     h1{
         display: block;
-        width: 430px;
-        font-size: 32px;
-        font-weight: 700;
-        font-family: 'Maven Pro', sans-serif;
-        color: rgba(255,255,255,1);
-        text-transform: uppercase;
-        text-align: center;
-        letter-spacing: 0.05em;
-        line-height: 40px;
+        width: 450px;
+        .text-definition(35px, 700, Maven Pro, rgba(255,255,255,1),uppercase, center, 0.05em, 45px);
         margin: 0 auto;
         padding-top: 177px;
         margin-bottom: 73px;
     }
 
     p.kicker{
+        .text-definition(19px, 600, Raleway, rgba(255,255,255,1),uppercase, center, 0.05em, 30px);
         display: block;
         width: 553px;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 18px;
-        font-weight: 700;
-        font-family: 'Raleway', sans-serif;
-        color: rgba(255,255,255,1);
-        line-height: 24px;
-        letter-spacing: 0.05em;
         margin: 0 auto;
     }
 
     div.overlayed{
-        background-color: rgba(0, 0, 0, 0.35);
+        background-color: rgba(0, 0, 0, 0.4);
         width: 100%;
         height: 495px;
     }
 }
 
 
-.page-title-style{
-    color: @green;
-    font-family: 'Advent Pro', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    text-align: center;
-    padding-top: @tittle-top-size-padding;
-    padding-bottom: @content-top-padding-size;
+/*Content Body Style*/
+section.about-me{
+    width: 100%;
+    padding: @container-padding 0 0 0;
+    .clearfix();
+
+    .body-content-wrapper{
+        .column(12);
+
+        h3{
+            .page-title-style();
+        }
+
+        .profile-box{
+            margin: 0 auto;
+            text-align: center;
+
+            .r-m{
+                margin-right: 110px;
+            }
+
+            .r-l{
+                margin-left: 110px;
+            }
+
+            .container-circle{
+                text-align: center;
+                display: inline-block;
+               
+                p{
+                    .text-definition(17px, 500, Raleway, @green,none, center, 0.05em, 24px);
+                }
+
+                [class^="circle-"]{
+                    background-color: @dark-blue;
+                    border-radius: 50%;
+                    width: 78px;
+                    height: 78px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    .text-definition(30px, 500, Advent Pro, @white-background,none, center, 0.05em, 24px);
+
+                    span{
+                        display: block;
+                        margin: 26px 0 0 0;
+                    }
+                }
+            }
+
+            .profile-image{
+                background: url(../images/profile-picture.jpg);
+                width: 230px;
+                height: 230px;
+                display: inline-block;
+                margin: 0 110px 0 110px;
+            }
+        }
+
+        .blurb{
+            margin: 80px 0 0 0;
+        }
+
+        p.description{
+            .column(4);
+            .pull(4);
+            .push(4);
+            display: inline-block;
+            .text-definition(17px, 500, Raleway, @dark-gray,none, center, 0.05em, 36px);
+        }
+
+        .experience-box{
+            .column(6);
+            margin: @container-padding 0 @container-padding 0;
+            text-align: center;
+
+            .timeline{
+                position: relative;
+                padding: 2em 0;
+                margin-top: 2em;
+                margin-bottom: 2em;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    height: 100%;
+                    width: 1px;
+                    background: @dark-blue;
+                }
+
+                .timeline-block{
+                    margin: 0 0 30px 0;
+                    padding: 30px 0 30px 0;
+                    
+                    .timeline-point{
+                        width: 18px;
+                        height: 18px;
+                        background-color: @dark-blue;
+                        border-radius: 50%;
+                        margin: 0 auto;
+                    }
+
+                    .timeline-date{
+                        .text-definition(18px, 600, Advent Pro, @green, uppercase, center, 0.05em, 24px);
+                        position: absolute;
+                        left: 23%;
+                        margin: -5px 0 0 0;
+                        text-align: right;
+                        width: 200px;
+                    }
+
+                    div.timeline-tittle{
+                        position: relative;
+                        left: 60%;
+                        margin: -28px;
+                        background-color: @dark-blue;
+                        padding: 8px 0 0 15px;
+                        height: 32px;
+                        width: 300px;
+                        vertical-align: middle;
+                        .text-definition(19px, 400, Advent Pro, @white-background, uppercase, left, 0.05em, 24px);
+
+                        span{
+                            display: inline-block;
+                            float: right;
+                            margin: 0 10px 0 0;
+                            color: @green;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .timeline-content{
+                        width: 262px;
+                        text-align: left;
+                        background-color: @gray-background;
+                        width: 285px;
+                        padding: 8px 15px 0 15px;
+                        position: relative;
+                        left: 56.9%;
+                        top: 28px;
+                        display: none;
+                    }
+                }
+            }
+
+        }
+
+        .skills-box{
+            .column(6);
+            margin: @container-padding 0 @container-padding 0;
+            .skill-unit{
+                height: 50px;
+                width: 400px;
+                margin: 25px auto;
+            }
+
+            span{
+                display: block;
+                margin-bottom: 5px;
+                .text-definition(20px, 500, Advent Pro, @dark-blue, none, left, 0.05em, 24px);
+            }
+
+            progress{
+                width: 100%;
+                height: 15px;
+                border: 0;
+                -webkit-appearance: none;
+
+                &::-webkit-progress-bar {
+                    background: @dark-blue;
+                    padding: 0;
+                }
+
+                &::-webkit-progress-value {
+                    background-color: @green;
+                }
+            }
+        }
+    }
+
 }
 
 
-/*Content Body Style*/
-.body-content-wrapper{
-    .column(12);
+section.portfolio{
+
+    width: 100%;
+    padding: @container-padding 0 @container-padding 0;
+    background-color: @gray-background;
+    .clearfix();
 
     h3{
         .page-title-style();
     }
 
-    .profile-box{
-        margin: 0 auto;
-        text-align: center;
-
-        .r-m{
-            margin-right: 110px;
-        }
-
-        .r-l{
-            margin-left: 110px;
-        }
-
-        .container-circle{
-            text-align: center;
-            display: inline-block;
-           
-
-            p{
-                color: @green;
-                font-size: 16px;
-                font-family: 'Raleway', sans-serif;
-                line-height: 24px;
-                letter-spacing: 0.05em;
-                font-weight: 600;
-            }
-
-            [class^="circle-"]{
-                background-color: @dark-blue;
-                border-radius: 50%;
-                width: 78px;
-                height: 78px;
-                display: inline-block;
-                text-align: center;
-                vertical-align: middle;
-                color:  @white-background;
-                font-weight: 500;
-                font-family: 'Advent Pro', sans-serif;
-                font-size: 30px;
-                line-height: 24px;
-                letter-spacing: 0.05em;
-                span{
-                    display: block;
-                    margin: 26px 0 0 0;
-                }
-            }
-        }
-
-        .profile-image{
-            background: url(../images/profile-picture.jpg);
-            width: 230px;
-            height: 230px;
-            display: inline-block;
-            margin: 0 110px 0 110px;
-        }
-    }
-
-    .blurb{
-        margin: 80px 0 125px 0;
-    }
-
-    p.description{
-        .column(4);
-        .pull(4);
-        .push(4);
-        display: inline-block;
-        line-height: 36px;
-        letter-spacing: 0.05em;
-        color: #666666;
-        font-size: 17px;
-        font-family: 'Raleway', sans-serif;
-        font-weight: 400;
-        text-align: center;
-    }
-
-    .experience-box{
-        .column(6);
-        height: 600px;
-        text-align: center;
-
-        .timeline{
-            position: relative;
-            padding: 2em 0;
-            margin-top: 2em;
-            margin-bottom: 2em;
-
-            &::before{
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 50%;
-                height: 100%;
-                width: 1px;
-                background: @dark-blue;
-            }
-
-            .timeline-block{
-                //background-color: gray;
-                margin: 0 0 30px 0;
-                padding: 30px 0 30px 0;
-                
-                .timeline-point{
-                    width: 18px;
-                    height: 18px;
-                    background-color: @dark-blue;
-                    border-radius: 50%;
-                    margin: 0 auto;
-                }
-
-                .timeline-date{
-                    font-family: 'Advent Pro', sans-serif;
-                    color: @green;
-                    font-size: 18px;
-                    letter-spacing: 0.05em;
-                    line-height: 24px;
-                    font-weight: 600;
-                    position: absolute;
-                    left: 23%;
-                    margin: -5px 0 0 0;
-                    text-align: right;
-                    width: 200px;
-                    text-transform: uppercase;
-
-                }
-
-                div.timeline-tittle{
-                    position: relative;
-                    left: 60%;
-                    margin: -28px;
-                    background-color: @dark-blue;
-                    color: @white-background;
-                    padding: 8px 0 0 15px;
-                    height: 32px;
-                    width: 300px;
-                    vertical-align: middle;
-                    text-align: left;
-                    line-height: 24px;
-                    letter-spacing: 0.05em;
-                    font-size: 19px;
-                    font-family: 'Advent Pro', sans-serif;
-                    font-weight: 400;
-
-                    span{
-                        display: inline-block;
-                        float: right;
-                        margin: 0 10px 0 0;
-                        color: @green;
-                        cursor: pointer;
-                    }
-                }
-
-                .timeline-content{
-                    width: 262px;
-                    text-align: left;
-                    background-color: @gray-background;
-                    width: 285px;
-                    padding: 8px 15px 0 15px;
-                    position: relative;
-                    left: 56.9%;
-                    top: 28px;
-                    display: none;
-                }
-            }
-        }
-
-    }
-
-    .skills-box{
-        .column(6);
-        //background-color: red;
-        .skill-unit{
-            height: 50px;
-            width: 400px;
-            margin: 25px auto;
-        }
-
-        span{
-            display: block;
-            color: @dark-blue;
-            line-height: 24px;
-            letter-spacing: 0.05em;
-            font-size: 20px;
-            font-family: 'Advent Pro', sans-serif;
-            margin-bottom: 5px;
-            font-weight: 500;
-        }
-
-        progress{
-            width: 100%;
-            height: 15px;
-            border: 0;
-            -webkit-appearance: none;
-
-            &::-webkit-progress-bar {
-                background: @dark-blue;
-                padding: 0;
-            }
-
-            &::-webkit-progress-value {
-                background-color: @green;
-                /* Now animating it */
-                -webkit-animation: move 5s linear 0 infinite;
-            }
-        }
-    }
-}
-
-
-section.portfolio{
-    width: 100%;
-    background-color: @gray-background;
-    height: 400px;
-    clear: both;
-
     .portfolio-container{
         .column(12);
-        
-        h3{
-            .page-title-style();
+        float: none;
+
+        .thumb-container{
+            max-width: 999px;
+            margin: 0 auto;
+
+            a{
+                display: block;
+                width: 25%;
+                float: left;
+                background-size: cover;
+                position: relative;
+                padding-top: 20%;
+                overflow: hidden;
+                text-align: center;
+
+                .modal-thumb-layer{
+                    .position(absolute, 100%, 0px, 0px, 0px);
+                    background-color: rgba(0, 0, 0, 0.55);
+                    .transition(all 0.4s ease);
+
+                    span{
+                        .text-definition(18px, 500, Advent Pro, @white-background, uppercase, center, 0.05em, 24px);
+                        display: inline-block;
+                        padding: 50px 0 0 0;
+                    }
+
+                    div.know-more{
+                        background: url(../images/portfolio/more.png) center center no-repeat;
+                        background-size: cover;                  
+                        width: 27px;
+                        height: 27px;  
+                        margin: 17px auto;
+                    }
+
+
+                }
+
+                &:hover .modal-thumb-layer{
+                    .position(absolute, 0%, 0px, 0px, 0px);
+                }
+
+                &.p1{
+                    background: url(../images/portfolio/p1.jpg) center center no-repeat;
+                }
+                &.p2{
+                    background: url(../images/portfolio/p2.jpg) center center no-repeat;
+                }
+                &.p3{
+                    background: url(../images/portfolio/p3.jpg) center center no-repeat;
+                }
+                &.p4{
+                    background: url(../images/portfolio/p4.jpg) center center no-repeat;
+                }
+                &.p5{
+                    background: url(../images/portfolio/p5.jpg) center center no-repeat;
+                }
+                &.p6{
+                    background: url(../images/portfolio/p6.jpg) center center no-repeat;
+                }
+                &.p7{
+                    background: url(../images/portfolio/p7.jpg) center center no-repeat;
+                }
+                &.p8{
+                    background: url(../images/portfolio/p8.jpg) center center no-repeat;
+                }
+            }
         }
     }
 }
 
+section.contact{
+    width: 100%;
+    padding: @container-padding 0 @container-padding 0;
+    background-color: @white-background;
+    .clearfix();
+    
+    h3{
+        .page-title-style();
+    }
+
+    .contact-container{
+        .push(3);
+        .pull(3);
+
+        form{
+            max-width: 503px;
+            margin:0 auto;
+
+            .contact-info-group{
+                margin: 0 0 20px 0;
+                .clearfix();
+
+                input[type='text']{
+                    width: 48%;
+                    height: 35px;
+                    padding: 0 0 0 10px;
+
+                    &:first-child{
+                        float: left;
+                    }
+
+                    &:last-child{
+                        float: right;
+                    }
+                }
+            }
+
+            input[type='text'], textarea{
+                .text-definition(14px, 500, Raleway, @dark-blue, none, left, 0.05em, 24px);
+                border: 1px solid @green;
+            }
+
+            textarea{
+                width: 100%;
+                max-width: 100%;
+                height: 158px;
+                max-height: 158px;
+                padding: 5px 0 0 10px;
+                margin: 0 0 20px 0;
+            }
+
+            input[type="submit"]{
+                float: right;
+                width: 134px;
+                height: 40px;
+                background-color: @green;
+                border: 0;
+                .text-definition(16px, 500, Advent, @white-background, uppercase, center, 0.05em, 24px);
+                cursor: pointer;
+            }
+        }
+    }
+}
 /*Content Body Style*/
 
 
 
 /* Page Footer */
 footer{
-    clear: both;
+    .clearfix();
     background-color: @gray-background;
     width: 100%;
     height: 144px;

@@ -13,9 +13,6 @@
         <!--<link rel="stylesheet" href="css/normalize.min.css">-->
         <link rel="stylesheet/less" type="text/css" href="css/main.less">
 
-        <!--<script src="js/vendor/modernizr-2.6.2.min.js"></script>-->
-        <script src="js/vendor/less.js" ></script>
-
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -26,9 +23,9 @@
             <div class="overlayed">
                 <nav>
                     <ul>
-                        <li><a href="">About Me</a></li>
-                        <li><a href="">Portfolio</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="#aboutme">About Me</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav> 
 
@@ -39,9 +36,9 @@
             </div>
         </header>
 
-        <section id="about-me">
+        <section class="about-me">
             <div class="body-content-wrapper">
-                <h3>About Me</h3>
+                <h3 id="aboutme">About Me</h3>
 
                 <div class="profile-box">
                     
@@ -118,7 +115,7 @@
                             <span class="timeline-date">June 2011 - July 2014</span>
                             <div class="timeline-point"></div>
                             <div class="timeline-tittle">
-                                Accenture - Systems Analyst
+                                Accenture - System Analyst
                                 <span>[+]</span>
                             </div>
                             <div class="timeline-content">
@@ -209,8 +206,117 @@
         </section>
 
         <section class="portfolio">
+            <h3 id="portfolio">Portfolio</h3>
+
             <div class="portfolio-container">
-                <h3>Portfolio</h3>
+                <!-- Thumb 1 -->
+                <div class="thumb-container">
+                    <a href="#" class="p1">
+                        <div class="modal-thumb-layer">
+                            <span><strong>e-Learner Web project</strong></span>
+                            <div class="know-more"></div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Thumb 2 -->
+                <div class="thumb-container">
+                    <a href="#" class="p2">
+                        <div class="modal-thumb-layer">
+                            <span><strong>My City Wall - Mobile App</strong></span>
+                            <div class="know-more"></div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Thumb 3 -->
+                <div class="thumb-container">
+                    <a href="#" class="p3">
+                        <div class="modal-thumb-layer">
+                            <span><strong>Responsive Web Development</strong></span>
+                            <div class="know-more"></div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Thumb 4 -->
+                <div class="thumb-container">
+                    <a href="#" class="p4">
+                        <div class="modal-thumb-layer">
+                            <span><strong>All About My Baby Blog</strong></span>
+                            <div class="know-more"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2 Projects Reg -->
+            <div class="portfolio-container">
+                <!-- Thumb 1 -->
+                <div class="thumb-container">
+                    <a href="#" class="p5">
+                        <div class="modal-thumb-layer">
+                            <span><strong>Fashion.me - Lean Style</strong></span>
+                            <div class="know-more"></div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Thumb 2 -->
+                <div class="thumb-container">
+                    <a href="#" class="p6">
+                        <div class="modal-thumb-layer">
+                            <span><strong>Aroa.com.br - Refactored Website</strong></span>
+                            <div class="know-more"></div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Thumb 3 -->
+                <div class="thumb-container">
+                    <a href="#" class="p7">
+                        <div class="modal-thumb-layer">
+                            <span><strong>Tortolos.com - Planea tu Matrimonio</strong></span>
+                            <div class="know-more"></div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Thumb 4 -->
+                <div class="thumb-container">
+                    <a href="#" class="p8">
+                        <div class="modal-thumb-layer">
+                            <span><strong>PinUp.com - Digital and Social Web Marketing </strong></span>
+                           <div class="know-more"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h3 id="contact">Let's work together</h3>
+
+            <div class="contact-container">
+                <form action="//forms.brace.io/hugohcn@gmail.com">
+                    <div class="contact-info-group">
+                    
+                        <input id="txtFirstName" type="text" placeholder="Your First Name" required>
+                        <input id="txtLastName" type="text" placeholder="Your Last Name" required>    
+
+                    </div>
+                    
+                    <div class="contact-info-group">
+                        
+                        <input id="txtEmailAdress" type="text" placeholder="Your E-mail Adress" required>
+                        <input id="txtMessageSubject" type="text" placeholder="Message Subject" required>
+
+                    </div>
+
+                    <textarea id="txtEmailMessage" name="" cols="60" rows="10" placeholder="Tell me more about your project..." required></textarea>
+
+                    <input type="submit" value="Send">
+                </form>
             </div>
         </section>
         
@@ -225,13 +331,15 @@
                 <p>&copy; Copyright 2014 - Hugo Nascimento</p>
             </div>
         </footer>
-        
 
         <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>-->
-        
+        <script src="js/vendor/jquery-1.11.1.min.js"></script>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+        <script src="js/vendor/less.js" ></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
         <script>
