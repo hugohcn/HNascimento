@@ -6,11 +6,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Hugo Nascimento</title>
+        <title>Hugo Nascimento - UX/UI Design & Front-End Developer</title>
+
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!--<link rel="stylesheet" href="css/normalize.min.css">-->
+        <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet/less" type="text/css" href="css/main.less">
 
     </head>
@@ -84,46 +85,37 @@
                     
                     <div class="timeline">
 
-                        <!-- Experience 1 -->
                         <div class="timeline-block">
                             <span class="timeline-date">July 2014 - Current</span>
                             <div class="timeline-point"></div>
                             <div class="timeline-tittle">
                                 Ci&T - Software Engineer
-                                <span>[+]</span>
+                                <span class="know-more">[+]</span>
                             </div>
                             <div class="timeline-content">
+                                <p><strong>Software Engineer</strong> - Operates in GPV Ferrovias - A great rail logistics project.</p>
                                 <p>
-                                    Systems analyst and web  developer. 
-                                    Operates in the commercial area, 
-                                    rail logistics, port logistics and mining 
-                                    from multinational Vale.
-                                </p>
-
-                                <p>
-                                    Evaluation of new systems and business rules.
-                                </p>
-
-                                <p>
-                                    Transfer of knowledge activities with the client (VALE - Oman) and Accenture own teams who are in another country (Philippines).
+                                    As a Business Analyst, I created and developed functional documents for the system. Furthermore, I helped the client to create solutions for middleware layer (Integration Team).
                                 </p>
                             </div>
                         </div>
 
-                        <!-- Experience 2 -->
                         <div class="timeline-block">
                             <span class="timeline-date">June 2011 - July 2014</span>
                             <div class="timeline-point"></div>
                             <div class="timeline-tittle">
                                 Accenture - System Analyst
-                                <span>[+]</span>
+                                <span class="know-more">[+]</span>
                             </div>
-                            <div class="timeline-content">
+                             <div class="timeline-content">
                                 <p>
-                                    Systems analyst and web  developer. 
-                                    Operates in the commercial area, 
+                                    <strong>Systems analyst and web developer.</strong>
+                                </p>
+
+                                <p>
+                                    Worked at the commercial area, 
                                     rail logistics, port logistics and mining 
-                                    from multinational Vale.
+                                    for Vale.
                                 </p>
 
                                 <p>
@@ -131,7 +123,7 @@
                                 </p>
 
                                 <p>
-                                    Transfer of knowledge activities with the client (VALE - Oman) and Accenture own teams who are in another country (Philippines).
+                                    Knowledge Transfer for Vale Team (Omã) and Accenture (Manila - Phillipines).
                                 </p>
                             </div>
                         </div>
@@ -141,24 +133,16 @@
                             <span class="timeline-date">March 2008 - July 2011</span>
                             <div class="timeline-point"></div>
                             <div class="timeline-tittle">
-                                Freelancer - Web Developer
-                                <span>[+]</span>
+                                Freelancer - Front-End Developer
+                                <span class="know-more">[+]</span>
                             </div>
-                            <div class="timeline-content">
-                                <p>
-                                    Systems analyst and web  developer. 
-                                    Operates in the commercial area, 
-                                    rail logistics, port logistics and mining 
-                                    from multinational Vale.
-                                </p>
-
-                                <p>
-                                    Evaluation of new systems and business rules.
-                                </p>
-
-                                <p>
-                                    Transfer of knowledge activities with the client (VALE - Oman) and Accenture own teams who are in another country (Philippines).
-                                </p>
+                             <div class="timeline-content">
+                                    <p>
+                                        <strong>Front-End Developer</strong>
+                                    </p>
+                                    <p>
+                                        Evaluation of new systems and business rules.
+                                    </p>
                             </div>
                         </div>
                     </div>
@@ -298,24 +282,24 @@
             <h3 id="contact">Let's work together</h3>
 
             <div class="contact-container">
-                <form action="//forms.brace.io/hugohcn@gmail.com">
+                <form id="frmContact" method="POST" action="//forms.brace.io/hugohcn@gmail.com">
                     <div class="contact-info-group">
                     
-                        <input id="txtFirstName" type="text" placeholder="First Name" required>
-                        <input id="txtLastName" type="text" placeholder="Last Name" required>    
+                        <input id="txtFirstName" name="firstName" type="text" placeholder="First Name" required>
+                        <input id="txtLastName"  name="lastName" type="text" placeholder="Last Name" required>    
 
                     </div>
                     
                     <div class="contact-info-group">
                         
-                        <input id="txtEmailAdress" type="text" placeholder="E-mail Adress" required>
-                        <input id="txtMessageSubject" type="text" placeholder="Message Subject" required>
+                        <input id="txtEmailAdress" name="emailAdress" type="text" placeholder="E-mail Adress" required>
+                        <input id="txtMessageSubject" name="messageSubject" type="text" placeholder="Message Subject" required>
 
                     </div>
 
-                    <textarea id="txtEmailMessage" name="" cols="60" rows="10" placeholder="Tell me more about your project..." required></textarea>
+                    <textarea id="txtEmailMessage" name="emailmessage" name="" cols="60" rows="10" placeholder="Tell me more about your project..." required></textarea>
 
-                    <input type="submit" value="Send">
+                    <input type="submit" id="btnSend" value="Send">
                 </form>
             </div>
         </section>

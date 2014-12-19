@@ -184,35 +184,37 @@ section.about-me{
                     }
 
                     div.timeline-tittle{
-                        position: relative;
+                        position: absolute;
                         left: 60%;
                         margin: -28px;
                         background-color: @dark-blue;
                         padding: 8px 0 0 15px;
                         height: 32px;
-                        width: 300px;
+                        width: 350px;
                         vertical-align: middle;
-                        .text-definition(19px, 400, Advent Pro, @white-background, uppercase, left, 0.05em, 24px);
+                        .text-definition(15px, 600, Raleway, @white-background, none, left, 0.05em, 24px);
 
                         span{
                             display: inline-block;
                             float: right;
                             margin: 0 10px 0 0;
-                            color: @green;
                             cursor: pointer;
+                            font-weight: 800;
+                            .text-definition(22px, 600, Advent pro, @green, none, left, 0.05em, 24px);
                         }
                     }
 
                     .timeline-content{
-                        width: 262px;
                         text-align: left;
                         background-color: @gray-background;
-                        width: 285px;
-                        padding: 8px 15px 0 15px;
+                        width: 329px;
+                        padding: 15px;
                         position: relative;
                         left: 56.9%;
-                        top: 28px;
+                        top: 12px;
                         display: none;
+                        margin-top:0px;
+                        .text-definition(16px, 500, Raleway, @dark-blue, none, justify, 0.05em, 24px);
                     }
                 }
             }
