@@ -26,7 +26,7 @@ $(function(){
 		
 	});
 
-	//On form submit...
+	//On Contact Form Submit...
 	$('#frmContact').on('submit', function(event){
 		//Stops default submit
 		event.preventDefault();
@@ -59,6 +59,21 @@ $(function(){
 		    	console.log(error);
 		    }
 		});
+	});
+
+	$('.project-details-link').on('click', function(event){
+		event.preventDefault();
+		$.pgwModal({
+			target: '#project-detail-box',
+			titleBar: false,
+			closable: true,
+			maxWidth: 1170,
+		});
+	});
+
+	//Request project data, ehwn the modal start opening...
+	$(document).bind('PgwModal::Open', function() {
+	    //ajax web api request...
 	});
 });
 

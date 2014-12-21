@@ -363,7 +363,7 @@ section.contact{
                 margin: 0 0 20px 0;
                 .clearfix();
 
-                input[type='text']{
+                input[type='text'], input[type='email']{
                     width: 48%;
                     height: 35px;
                     padding: 0 0 0 10px;
@@ -376,12 +376,18 @@ section.contact{
                         float: right;
                     }
                 }
+
+                input[type='email']{
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                }
             }
 
-            input[type='text'], textarea{
+            input[type='text'], input[type='email'], textarea{
                 .text-definition(14px, 500, Raleway, @dark-blue, none, left, 0.05em, 24px);
                 border: 1px solid @green;
             }
+
 
             textarea{
                 width: 100%;
@@ -406,7 +412,104 @@ section.contact{
 }
 /*Content Body Style*/
 
+/* Projects Modal Popup*/
+#project-detail-box{
+    display: none;
+}
 
+div.pm-content{
+    background-color: @white-background;
+    h1, h2, h3, h4, h5, h6{
+        margin: 0;
+    }
+
+    hgroup{
+        .column(12);
+        .clearfix();
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        h3{
+            font-family: 'Raleway';
+            font-weight: 700;
+            color: @green;
+            text-align: left;
+            line-height: 24px;
+            letter-spacing: 0.05em;
+            padding-bottom: 10px;
+        }
+
+        h4{
+            font-family: 'Raleway';
+            font-weight: 400;
+            color: @dark-gray;
+            text-align: left;
+            line-height: 24px;
+            letter-spacing: 0.05em;
+        }
+    }
+
+    .project-images, .project-details{
+        .column(6);
+    }
+
+    .project-images{
+        
+        .thumb-project-images{
+            margin: 10px 0 20px 0;
+            text-align: center;
+            .thumbnails{
+                width: 120px;
+                height: 100px;
+                display: inline-block;
+                margin-right: 10px;
+                background: url(../images/projects/project-main-image.jpg) no-repeat;
+                background-position: center center;
+                background-size: cover;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .project-details{
+        h4{
+            font-family: 'Raleway';
+            font-weight: 700;
+            color: @green;
+            text-align: left;
+            line-height: 24px;
+            letter-spacing: 0.05em;
+        }
+
+        p{
+            .text-definition(16px, 500, Raleway, @dark-blue, none, justify, 0.05em, 24px); 
+            padding-bottom: 20px;
+        }
+        
+        ul{
+            .item-reset();
+
+            li{
+                list-style: none;
+                margin: 10px 0 0 0;
+                .text-definition(16px, 500, Raleway, @dark-blue, none, justify, 0.05em, 24px);
+
+                &:first-child{
+                    margin-top: 15px;
+                }
+
+                a{
+                    text-decoration: none;
+                    .text-definition(15px, 600, Raleway, @dark-blue, none, left, 0.05em, 24px);
+                }
+
+                &:last-child{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
 
 /* Page Footer */
 footer{

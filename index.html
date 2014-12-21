@@ -11,7 +11,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/pgwmodal.min.css">
         <link rel="stylesheet/less" type="text/css" href="css/main.less">
 
     </head>
@@ -195,7 +195,7 @@
             <div class="portfolio-container">
                 <!-- Thumb 1 -->
                 <div class="thumb-container">
-                    <a href="#" class="p1">
+                    <a href="#" class="p1 project-details-link">
                         <div class="modal-thumb-layer">
                             <span><strong>HNascimento.com - Website</strong></span>
                             <div class="know-more"></div>
@@ -205,7 +205,7 @@
 
                 <!-- Thumb 2 -->
                 <div class="thumb-container">
-                    <a href="#" class="p2">
+                    <a href="#" class="p2 project-details-link">
                         <div class="modal-thumb-layer">
                             <span><strong>My City Wall - Mobile App</strong></span>
                             <div class="know-more"></div>
@@ -215,7 +215,7 @@
 
                 <!-- Thumb 3 -->
                 <div class="thumb-container">
-                    <a href="#" class="p3">
+                    <a href="#" class="p3 project-details-link">
                         <div class="modal-thumb-layer">
                             <span><strong>Responsive Web Development</strong></span>
                             <div class="know-more"></div>
@@ -225,7 +225,7 @@
 
                 <!-- Thumb 4 -->
                 <div class="thumb-container">
-                    <a href="#" class="p4">
+                    <a href="#" class="p4 project-details-link">
                         <div class="modal-thumb-layer">
                             <span><strong>All About My Baby Blog</strong></span>
                             <div class="know-more"></div>
@@ -238,7 +238,7 @@
             <div class="portfolio-container">
                 <!-- Thumb 1 -->
                 <div class="thumb-container">
-                    <a href="#" class="p5">
+                    <a href="#" class="p5 project-details-link">
                         <div class="modal-thumb-layer">
                             <span><strong>Fashion.me - Lean Style</strong></span>
                             <div class="know-more"></div>
@@ -248,7 +248,7 @@
 
                 <!-- Thumb 2 -->
                 <div class="thumb-container">
-                    <a href="#" class="p6">
+                    <a href="#" class="p6 project-details-link">
                         <div class="modal-thumb-layer">
                             <span><strong>Clínica Dr. Amantino Soares - Website</strong></span>
                             <div class="know-more"></div>
@@ -258,7 +258,7 @@
 
                 <!-- Thumb 3 -->
                 <div class="thumb-container">
-                    <a href="#" class="p7">
+                    <a href="#" class="p7 project-details-link">
                         <div class="modal-thumb-layer">
                             <span><strong>Tortolos.com - Planea tu Matrimonio</strong></span>
                             <div class="know-more"></div>
@@ -268,12 +268,49 @@
 
                 <!-- Thumb 4 -->
                 <div class="thumb-container">
-                    <a href="#" class="p8">
+                    <a href="#" class="p8 project-details-link">
                         <div class="modal-thumb-layer">
                             <span><strong>PinUp.com - Digital and Social Web Marketing </strong></span>
                            <div class="know-more"></div>
                         </div>
                     </a>
+                </div>
+            </div>
+
+            <!-- Modal popup -->
+            <div id="project-detail-box">
+                <hgroup class="modal-header">
+                    <h3>My project 12345</h3>
+                    <h4>Project started at 2014/12/15</h4>    
+                </hgroup>
+
+                <div class="project-images">
+                    <!-- project main image -->
+                    <img src="images/projects/project-main-image.jpg" alt="">
+
+                    <!-- Thumbnails structure -->
+                    <div class="thumb-project-images">
+                        <div class="thumbnails"></div>
+                        <div class="thumbnails"></div>
+                        <div class="thumbnails"></div>
+                        <div class="thumbnails"></div>
+                    </div>
+                </div>
+
+                <div class="project-details">
+                    <h4>Project Description</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime nihil deserunt quasi hic et aut, ea facere soluta suscipit odio! Beatae voluptatum amet aspernatur in numquam iure, error maiores corrupti.
+                    </p>
+
+                    <h4>Used Technologies</h4>
+                    <ul class="project-tech-tags">
+                        <li><span>HTML5 / CSS3</span></li>
+                        <li><span>Responsive Web Design</span></li>
+                        <li><span>jQuery</span></li>
+                        <li><span>PHP</span></li>
+                        <li><a href="">Visit Website</a></li>
+                    </div>
                 </div>
             </div>
         </section>
@@ -292,7 +329,7 @@
                     
                     <div class="contact-info-group">
                         
-                        <input id="txtEmailAdress" name="emailAdress" type="text" placeholder="E-mail Adress" required>
+                        <input id="txtEmailAdress" name="emailAdress" type="email" placeholder="E-mail Adress" required>
                         <input id="txtMessageSubject" name="messageSubject" type="text" placeholder="Message Subject" required>
 
                     </div>
@@ -320,6 +357,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>-->
         <script src="js/vendor/jquery-1.11.1.min.js"></script>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/vendor/pgwmodal.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
