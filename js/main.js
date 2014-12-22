@@ -49,14 +49,28 @@ $(function(){
 		    	if(data.success = "Email sent"){
 					$('#frmContact').each (function(){
 						this.reset();
+						$('.contact-status').text("Thank you - your e-mail has been sent.");
+						setTimeout(function() {    
+							$('.contact-status').fadeOut(600);
+				        }, 5000);
+						
 					});
 		    	}else{
 		    		//Mantain the form fields value
+		    		$('.contact-status').text("Ooooops! Something war wrong. Try again!!");
 
+		    		setTimeout(function() {
+					$('.contact-status').fadeOut(600);
+			        }, 5000);
+		    		
 		    	}
 		    },
 		    error: function(error){
 		    	console.log(error);
+		    },
+		    beforeSend: function(e){
+		    	$('.contact-status').text("Sending E-mail...");
+		    	$('.contact-status').fadeIn('slow');
 		    }
 		});
 	});
