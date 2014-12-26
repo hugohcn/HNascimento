@@ -89,6 +89,9 @@ $(function(){
 	$(document).bind('PgwModal::Open', function() {
 	    //ajax web api request...
 	});
+
+	$.slidebars();
+
 });
 
 
