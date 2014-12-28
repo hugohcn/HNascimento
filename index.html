@@ -12,8 +12,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
         <link rel="stylesheet" href="css/pgwmodal.min.css">
-        <link rel="stylesheet" href="css/owl.carousel.css">
         <link rel="stylesheet" href="css/slidebars.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
         <link rel="stylesheet/less" type="text/css" href="css/main.less">
 
     </head>
@@ -36,10 +36,12 @@
         
         <!-- website content -->
         <div id="sb-site">
-             <div class="sb-toggle-right right-mobile-menu">
-                <div class="navicon-line"></div>
-                <div class="navicon-line"></div>
-                <div class="navicon-line"></div>
+            <div id="menu-container">
+                <div class="sb-toggle-right right-mobile-menu">
+                    <div class="navicon-line"></div>
+                    <div class="navicon-line"></div>
+                    <div class="navicon-line"></div>
+                </div>
             </div>
 
             <header>
@@ -75,7 +77,9 @@
                             <p>Projects Done</p>
                         </div>
 
-                        <div class="profile-image"></div>
+                        <div class="profile-image">
+                            <img src="images/profile-picture.jpg" alt="">
+                        </div>
 
                         <div class="container-circle r-m">
                             <div class="circle-coffee"><span>110</span></div>
@@ -213,88 +217,38 @@
 
             <section class="portfolio">
                 <h3 id="portfolio">Portfolio</h3>
-
-                <div class="portfolio-container">
-                    <!-- Thumb 1 -->
-                    <div class="thumb-container">
-                        <a href="#" class="p1 project-details-link">
-                            <div class="modal-thumb-layer">
-                                <span><strong>HNascimento.com - Website</strong></span>
-                                <div class="know-more"></div>
-                            </div>
+                
+                <div id="projects-container" class="owl-carousel owl-theme">
+                    <div class="item">
+                        <a href="#" class="project-details-link">
+                            <img src="images/portfolio/p1.jpg" alt="Owl Image">    
+                        </a>
+                        <a href="#" class="project-details-link">
+                            <img src="images/portfolio/p5.jpg" alt="Owl Image">    
                         </a>
                     </div>
-
-                    <!-- Thumb 2 -->
-                    <div class="thumb-container">
-                        <a href="#" class="p2 project-details-link">
-                            <div class="modal-thumb-layer">
-                                <span><strong>My City Wall - Mobile App</strong></span>
-                                <div class="know-more"></div>
-                            </div>
+                    <div class="item">
+                        <a href="#" class="project-details-link">
+                            <img src="images/portfolio/p2.jpg" alt="Owl Image">    
+                        </a>
+                        <a href="#" class="project-details-link">
+                            <img src="images/portfolio/p6.jpg" alt="Owl Image">    
                         </a>
                     </div>
-
-                    <!-- Thumb 3 -->
-                    <div class="thumb-container">
-                        <a href="#" class="p3 project-details-link">
-                            <div class="modal-thumb-layer">
-                                <span><strong>Responsive Web Development</strong></span>
-                                <div class="know-more"></div>
-                            </div>
+                    <div class="item">
+                        <a href="#" class="project-details-link">
+                            <img src="images/portfolio/p3.jpg" alt="Owl Image">    
+                        </a>
+                        <a href="#" class="project-details-link">
+                            <img src="images/portfolio/p7.jpg" alt="Owl Image">    
                         </a>
                     </div>
-
-                    <!-- Thumb 4 -->
-                    <div class="thumb-container">
-                        <a href="#" class="p4 project-details-link">
-                            <div class="modal-thumb-layer">
-                                <span><strong>All About My Baby Blog</strong></span>
-                                <div class="know-more"></div>
-                            </div>
+                    <div class="item">
+                        <a href="#" class="project-details-link">
+                            <img src="images/portfolio/p4.jpg" alt="Owl Image">    
                         </a>
-                    </div>
-                </div>
-
-                <!-- 2 Projects Reg -->
-                <div class="portfolio-container">
-                    <!-- Thumb 1 -->
-                    <div class="thumb-container">
-                        <a href="#" class="p5 project-details-link">
-                            <div class="modal-thumb-layer">
-                                <span><strong>Fashion.me - Lean Style</strong></span>
-                                <div class="know-more"></div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Thumb 2 -->
-                    <div class="thumb-container">
-                        <a href="#" class="p6 project-details-link">
-                            <div class="modal-thumb-layer">
-                                <span><strong>Clínica Dr. Amantino Soares - Website</strong></span>
-                                <div class="know-more"></div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Thumb 3 -->
-                    <div class="thumb-container">
-                        <a href="#" class="p7 project-details-link">
-                            <div class="modal-thumb-layer">
-                                <span><strong>Tortolos.com - Planea tu Matrimonio</strong></span>
-                                <div class="know-more"></div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Thumb 4 -->
-                    <div class="thumb-container">
-                        <a href="#" class="p8 project-details-link">
-                            <div class="modal-thumb-layer">
-                                <span><strong>PinUp.com - Digital and Social Web Marketing </strong></span>
-                               <div class="know-more"></div>
-                            </div>
+                        <a href="#" class="project-details-link">
+                            <img src="images/portfolio/p8.jpg" alt="Owl Image">    
                         </a>
                     </div>
                 </div>
@@ -356,8 +310,10 @@
                             <input id="txtMessageSubject" name="messageSubject" type="text" placeholder="Message Subject" required>
 
                         </div>
-
-                        <textarea id="txtEmailMessage" name="emailmessage" name="" cols="60" rows="10" placeholder="Tell me more about your project..." required></textarea>
+                        
+                        <div class="contact-info-group">
+                            <textarea id="txtEmailMessage" name="emailmessage" name="" cols="60" rows="10" placeholder="Tell me more about your project..." required></textarea>
+                        </div>
 
                         <input type="submit" id="btnSend" value="Send">
                     </form>
@@ -382,13 +338,12 @@
 
         <script src="js/vendor/jquery-1.11.1.min.js"></script>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <script src="js/vendor/owl.carousel.min.js"></script>
         <script src="js/vendor/slidebars.min.js"></script>
         <script src="js/vendor/pgwmodal.min.js"></script>
+        <script src="js/vendor/owl.carousel.min.js"></script>
+        <script src="js/vendor/less.js" ></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
-        <script src="js/vendor/less.js" ></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
         <script>

@@ -90,8 +90,31 @@ $(function(){
 	    //ajax web api request...
 	});
 
-	$.slidebars();
+	//Carousel
+	
+	var owl = $("#projects-container");
 
+	owl.owlCarousel({
+		items : 4,
+		responsive : {
+			320: {
+				dots : true,
+				items : 1
+			},
+			500: {
+				items: 2
+			},
+			750 : {
+				items: 3
+			},
+			1000 : {
+				items: 4
+			}
+		}
+  	});
+
+	//Mobile Menu
+  	$.slidebars();
 });
 
 
