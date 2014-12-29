@@ -15,13 +15,13 @@ $(function(){
 			$(this).text('[-]');
 
 			//Slide Down
-			$(descBox).slideDown('slow');	
+			$(descBox).slideDown(400);	
 		}else{
 			//controlling event button
 			$(this).text('[+]');
 
 			//Slide Up
-			$(descBox).slideUp('slow');
+			$(descBox).slideUp(400);
 		}
 		
 	});
@@ -98,7 +98,6 @@ $(function(){
 		items : 4,
 		responsive : {
 			320: {
-				dots : true,
 				items : 1
 			},
 			500: {

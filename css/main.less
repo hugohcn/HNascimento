@@ -287,7 +287,6 @@ section.about-me{
                     }
                 }
             }
-
         }
 
         .skills-box{
@@ -615,7 +614,7 @@ footer{
         background-repeat: no-repeat;
         width: 40px;
         height: 40px;
-        margin-right: 50px;
+        margin-right: 14.285714285714285714285714285714%;
         display: inline-block;
     }
 
@@ -647,14 +646,14 @@ footer{
    ========================================================================== */
 
 //Devices with width less than 320px
-@media (max-width: 320px){
+@media (max-width: 319px){
     #sb-site{
         width: 320px;
     }
 }
 
 //Devices with screen width until 640px
-@media (max-width: 40em){
+@media (max-width: 640px){
     #menu-container{
         .column(12);
 
@@ -672,6 +671,15 @@ footer{
 
         h1, p.kicker{
             .column(12);
+        }
+
+        h1{
+            padding-top: 3.5em;
+            font-size: 3em;
+        }
+
+        p.kicker{
+            //padding-top: 2em;   
         }
     }
 
@@ -693,20 +701,58 @@ footer{
 
             .profile-image{
                 width: 150px;
-                height: 150px;
             }
 
             .experience-box{
                 .column(12);
-                margin: 0px 5px 0px 5px;
+
+                .timeline{
+                    max-width: 433px;
+                    margin: 0 auto;
+                    &::before{
+                        display: none;
+                    }
+
+                    .timeline-block{
+                        width: 100%;
+                        position: relative;
+                        margin-bottom: 50px;
+
+                        .timeline-point{
+                            display: none;
+                        }
+                        
+                        .timeline-date{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            text-align: left;
+                        }
+
+                        div.timeline-tittle{
+                            position: absolute;
+                            width: 100%;
+                            left: 0;
+                            margin: 0;
+                        }
+
+                        .timeline-content{
+                            position: relative;
+                            width: 100%;
+                            display: none;
+                            top: 38px;
+                            left: 0;
+                            margin: 0;
+                        }
+                    }
+                }
             }
 
             .skills-box{
                 .column(12);
-                margin: 0px 5px 0px 5px;
                 
                 .skill-unit{
-                    max-width: 90%;
+                    max-width: 433px;
                 }
 
                 span{
@@ -739,7 +785,6 @@ footer{
     section.contact{
         .contact-container{
             .column(12);
-
             form{
                 text-align: center;
                 width: 100%;
@@ -762,15 +807,6 @@ footer{
                     height: 40px;
                 }
             }
-        }
-    }
-
-    footer{
-        [class^="icon-"]{
-            margin-right: 20px;
-        }
-        p{
-
         }
     }
 }
