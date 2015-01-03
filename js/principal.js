@@ -33,7 +33,7 @@ $(function(){
 		
 		//Do Ajax call
 		$.ajax({
-		    url: "//forms.brace.io/hugohcn@gmail.com", 
+		    url: "//formspree.io/hugohcn@gmail.com", 
 		    method: "POST",
 		    data: {message: 
 		    		"New website contact:\n\n" + 
@@ -44,7 +44,6 @@ $(function(){
 			},
 		    dataType: "json",
 		    success: function(data){
-		    	console.log(data);
 		    	//Show successfully send message
 		    	if(data.success = "Email sent"){
 					$('#frmContact').each (function(){
@@ -57,16 +56,20 @@ $(function(){
 					});
 		    	}else{
 		    		//Mantain the form fields value
-		    		$('.contact-status').text("Ooooops! Something war wrong. Try again!!");
+		    		$('.contact-status').text("Ooooops! Something war wrong. Try again!");
 
 		    		setTimeout(function() {
-					$('.contact-status').fadeOut(600);
+						$('.contact-status').fadeOut(600);
 			        }, 5000);
 		    		
 		    	}
 		    },
 		    error: function(error){
-		    	console.log(error);
+		    	$('.contact-status').text("Ooooops! Something war wrong. Try again!");
+
+		    	setTimeout(function() {
+					$('.contact-status').fadeOut(600);
+		        }, 5000);
 		    },
 		    beforeSend: function(e){
 		    	$('.contact-status').text("Sending E-mail...");
@@ -87,11 +90,29 @@ $(function(){
 
 	//Request project data, ehwn the modal start opening...
 	$(document).bind('PgwModal::Open', function() {
-	    //ajax web api request...
+	    //Request details
+	    //Create image carousel
+	    var owl = $(".project-images");
+
+		owl.owlCarousel({
+			responsive : {
+				320: {
+					items : 1
+				},
+				500: {
+					items: 2
+				},
+				750 : {
+					items: 3
+				},
+				940 : {
+					items: 1
+				}
+			}
+	  	});
 	});
 
-	//Carousel
-	
+	//Portfolio Carousel
 	var owl = $("#projects-container");
 
 	owl.owlCarousel({
