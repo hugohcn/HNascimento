@@ -232,23 +232,23 @@ Main components
 }
 
 .cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
-  //font-size: 13px;
-  //font-size: 0.8125rem;
+  font-size: 1.4em;
+  font-size: 0.8125rem;
   font-size: 1.9em;
-  font-weight: 500;
+  font-weight: 400;
   font-family: "Raleway";
   color: #234457;
   font-style: none;
   text-align: left; 
   letter-spacing: 0.05em;
-  line-height: 1.5em;
+  line-height: 2em;
 }
 .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
   display: inline-block;
 }
 .cd-timeline-content p {
   margin: 1em 0;
-  //line-height: 1.6;
+  line-height: 1.6;
 }
 /*.cd-timeline-content .cd-read-more {
   float: right;
@@ -272,8 +272,8 @@ Main components
   }
 
   .cd-timeline-content h2 {
-    //font-size: 22px;
-    //font-size: 1.25rem;
+    font-size: 22px;
+    font-size: 1.25rem;
     font-size: 1.8em;
     padding-left: .65em;
     font-size: 1.8em;
@@ -288,8 +288,8 @@ Main components
   .cd-timeline-content p {
     /*font-size: 18px;
     font-size: 1rem;*/
-    font-size: 1.7em;
-    line-height: 1.6em;
+    font-size: 1.4em;
+    line-height: 2em;
   }
   .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
     /*font-size: 16px;
@@ -333,8 +333,8 @@ Main components
   .cd-timeline-content p {
     /*font-size: 18px;
     font-size: 1rem;*/
-    font-size: 1.7em;
-    line-height: 1.6em;
+    font-size: 1.4em;
+    line-height: 2em;
   }
   .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
     /*font-size: 16px;
@@ -374,7 +374,7 @@ Main components
     padding-left: .65em;
     text-align: left;
     font-size: 1.8em;
-    font-weight: 500;
+    font-weight: 400;
     font-family: "Advent Pro";
     font-style: none;
     text-align: left; 

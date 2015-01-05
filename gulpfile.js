@@ -15,7 +15,7 @@ var gulp = require('gulp'),
 
 //Gulp default
 gulp.task('default', ['clean'], function(callback){
-	runSequence('image-optz', 'css', 'scripts', 'html-build');
+	runSequence('image-optz', 'less-css', 'vendor-css', 'css', 'scripts', 'html-build');
 });
 
 //Clean task
@@ -29,23 +29,36 @@ gulp.task('clean', function(cb) {
 // 2 - minify/uglify script
 gulp.task('scripts', function(){
     gulp.src(['js/**/*', '!js/vendor/less.js'])
+    //.pipe(concat('main.js'))
     .pipe(uglify())
+    //.pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('build/js'));
 });
 
 //LESS Compile
-gulp.task('css', function(){
+gulp.task('less-css', function(){
 	gulp.src(['css/main.less', 'css/grid.less', 'default.less'])
     .pipe(less({paths:[path.join(__dirname, 'less', 'includes')]}))
     .pipe(minifyCSS())
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('build/css'));
+});
 
-    //get another css files and concatenate it
+gulp.task('vendor-css', function(){
+	//get another css files and concatenate it
     gulp.src(['css/*.css'])
-    //.pipe(concat('main.css'))
+    .pipe(concat('vendors.css'))
     .pipe(minifyCSS())
-    //.pipe(rename({ suffix: '.min' }))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('build/css'));
+});
+
+gulp.task('css', function(){
+	//get another css files and concatenate it
+    gulp.src(['build/css/*.css'])
+    .pipe(concat('style.css'))
+    .pipe(minifyCSS())
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('build/css'));
 });
 
@@ -56,7 +69,7 @@ gulp.task('html-build', function(){
 
 	gulp.src('*.html')
 	.pipe(usemin())
-	//.pipe(htmlMinify(opts))
+	.pipe(htmlMinify(opts))
 	.pipe(gulp.dest('build/'));
 });
 

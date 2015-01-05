@@ -21,6 +21,11 @@ img, picture, video, embed{
     max-width: 100%;
 }
 
+a, a:link, a:active, a:hover, a:visited{
+    outline: none;
+    border: 0;
+}
+
 *, *:before, *:after {
    -webkit-box-sizing: border-box;
    -moz-box-sizing: border-box;
@@ -94,7 +99,7 @@ header{
             li{
                 display: inline-block;
                 margin-left: 5.7em;
-
+                list-style: none;
                 a{
                     .text-definition(1.8em, 400, Advent Pro, rgba(255,255,255, 0.8),uppercase, center, 0.05em, 2.2em);
                 
@@ -170,7 +175,7 @@ section.about-me{
                 .column(2);
                
                 p{
-                    .text-definition(1.7em, 500, Raleway, @green,none, center, 0.05em, 1.4117647058823529411764705882353em);
+                    .text-definition(1.7em, 400, Raleway, @green,none, center, 0.05em, 1.4117647058823529411764705882353em);
                 }
 
                 [class^="circle-"]{
@@ -200,7 +205,7 @@ section.about-me{
 
         p.description{
             max-width: 100%;
-            .text-definition(1.7em, 500, Raleway, @dark-gray,none, center, 0.05em, 2.1176470588235294117647058823529em);
+            .text-definition(1.7em, 400, Raleway, @dark-gray,none, center, 0.05em, 2.1176470588235294117647058823529em);
         }
 
         .experience-box{
@@ -228,9 +233,16 @@ section.about-me{
                 width: 100%;
                 height: 15px;
                 border: 0;
-                -webkit-appearance: none;
+                
+                 -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
 
-                &::-webkit-progress-bar {
+                background: @dark-blue;
+                padding: 0;
+                color: @green;
+
+                &::-webkit-progress-bar{
                     background: @dark-blue;
                     padding: 0;
                 }
@@ -379,6 +391,12 @@ section.contact{
             input[type='text'], input[type='email'], textarea{
                 .text-definition(1.4em, 500, Raleway, @dark-blue, none, left, 0.05em, 1.7142857142857142857142857142857em);
                 border: 1px solid @green;
+
+                &:-ms-input-placeholder {
+                    font-style:italic;        
+                    color: @placeholder-ie-color;
+                    font-weight: normal;
+                }
             }
 
 
@@ -466,7 +484,7 @@ div.pm-content{
         }
 
         p{
-            .text-definition(1.5em, 500, Raleway, @dark-blue, none, justify, 0.05em, 1.6em); 
+            .text-definition(1.5em, 400, Raleway, @dark-blue, none, justify, 0.05em, 1.6em); 
             padding-bottom: 1.3333333333333333333333333333333em;
         }
         
@@ -476,7 +494,7 @@ div.pm-content{
             li{
                 list-style: none;
                 margin: 10px 0 0 0;
-                .text-definition(1.6em, 500, Raleway, @dark-blue, none, justify, 0.05em, 1.5);
+                .text-definition(1.6em, 400, Raleway, @dark-blue, none, justify, 0.05em, 1.5);
 
                 &:first-child{
                     margin-top: 0.9375em;
@@ -484,7 +502,7 @@ div.pm-content{
 
                 a{
                     text-decoration: none;
-                    .text-definition(1em, 600, Raleway, @dark-blue, none, left, 0.05em, 1.6em);
+                    .text-definition(1em, 400, Raleway, @dark-blue, none, left, 0.05em, 1.6em);
 
                     &:hover{
                         color: @green;
@@ -494,6 +512,7 @@ div.pm-content{
                 &:last-child{
                     //Considering the last child is the a element
                     margin-top: 1.3333333333333333333333333333333em;
+                    font-weight: 600;
                 }
             }
         }
@@ -686,6 +705,11 @@ footer{
 
 @media only screen and (min-width: 320px) and (max-width: 600px){
     #menu-container{
+         /*position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        height: 50px;*/
         .column(12);
         .right-mobile-menu{
             display: block;
@@ -694,29 +718,37 @@ footer{
     }
     
     header{
+        height: 320px;
         nav{
             display: none;
         }
+        
+        div.overlayed{
+            max-height: 320px;
+        }
+
 
         h1, p.kicker{
             .column(12);
         }
 
         h1{
-            padding-top: 3em;
-            font-size: 2.9em;
+            padding-top: 3.6em;
+            font-size: 2.2em;
             //font-size: 2.8em;
         }
 
         p.kicker{
             padding-top: 0em;   
-            font-size: 1.5em;
+            font-size: 1.2em;
         }
     }
 
     section.about-me{
+        padding: 3.8em 0 0 0;
         .body-content-wrapper{
             h3{
+                    font-size: 1.583em;
                     padding-bottom: 1.5em;
                 }
             .profile-box{
@@ -724,34 +756,51 @@ footer{
                     display: none;
                 }
 
-                 .profile-image{
+                .profile-image{
+                    img{
+                        width: 154px;
+                        height: 154px;
+                    }
                     .column(12);
                 }
             }
 
-            .experience-box{
-                h3{
-                    padding-bottom: 1.5em;
-                }
+            p.description{
+                font-size: 1.4em;
+                line-height: 2.8em;
+                .column(10);
+                .pull(1);
+                .push(1);
+            }
 
+            .experience-box{
+                padding: 3.8em 0 0 0;
+                h3{
+                    padding-bottom: 1em;
+                }
                 .column(12);
-                margin: 5em 0px 0px 0px;
             }
 
             .skills-box{
-                .column(12);
-                margin: 5em 0px 5em 0px;
-                
+                padding: 3.8em 0 0 0;
+                .column(10);
+                .push(1);
+                .pull(1);
                 h3{
                     padding-bottom: 1.5em;
                 }
                 
                 .skill-unit{
+                    margin: 1em auto;
                     max-width: 480px;
                 }
 
                 span{
-                    font-size: 1.9em;
+                    font-size: 1.6em;
+                }
+
+                progress{
+                    height: 12px;
                 }
             }
         }
@@ -759,11 +808,19 @@ footer{
     
     section.portfolio{
         h3{
-                padding-bottom: 1.5em;
-            }
+            font-size: 1.583em;
+            padding-bottom: 0;
+        }
+        
+        #projects-container .item a.project-details-link img{
+            margin-top: 2em;
+        }
+
         .portfolio-container{
-            .column(12);
-            margin: 5em 0px 5em 0px;
+            .column(10);
+            .pull(1);
+            .push(1);
+            /*margin: 5em 0px 5em 0px;*/
             .thumb-container{
                 width: 100%;
                 height: auto;
@@ -771,11 +828,11 @@ footer{
                     .modal-thumb-layer{
                         display: none;
                     }
-                    .column(12);
                     display: block;
                     padding: 0;
                     margin-bottom: 30px;
-                    height: 267px;
+                    width: 201px;
+                    height: 215px;
                 }
             }
         }
@@ -805,7 +862,7 @@ footer{
             }
 
             p{
-                .text-definition(1.5em, 500, Raleway, @dark-blue, none, left, 0.05em, 1.6em); 
+                .text-definition(1.5em, 400, Raleway, @dark-blue, none, left, 0.05em, 1.6em); 
                 padding-bottom: 1.3333333333333333333333333333333em;
             }
         }
@@ -821,8 +878,9 @@ footer{
 
     section.contact{
         h3{
-                padding-bottom: 1.5em;
-            }
+            font-size: 1.583em;
+            padding-bottom: 1.5em;
+        }
         .contact-container{
             .column(12);
             form{

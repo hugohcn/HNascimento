@@ -3,6 +3,18 @@
  * Description: Main JS Project File.
  */
 
+//Mordernizr
+/*Modernizr.load({
+  test: Modernizr.touch && Modernizr.csstransitions,
+  yep: 'js/swipe.js',
+  complete: function() {
+    if (Modernizr.touch && Modernizr.csstransitions) {
+      swipeEnabled = true;
+      buildSwipe();
+    }
+  }
+});*/
+
 //Document Ready
 $(function(){
 	smoothScroll(650);
@@ -78,6 +90,7 @@ $(function(){
 		});
 	});
 
+	//Open Modal when click in project image
 	$('.project-details-link').on('click', function(event){
 		event.preventDefault();
 		$.pgwModal({
@@ -134,7 +147,33 @@ $(function(){
   	});
 
 	//Mobile Menu
-  	$.slidebars();
+  	$.slidebars({
+  		siteClose: true, // true or false
+        disableOver: 480, // integer or false
+        hideControlClasses: true, // true or false
+        scrollLock: false // true or false
+  	});
+
+  	//Skills bar animation
+  	/*$(window).scroll(function(){
+		$('.skillbar').each(function(){
+			if ($(this).hasClass('notinview')){
+				$(this).find('.pointerval .value').html('0%');
+				if (isScrolledIntoView($(this).attr('id'))){
+		    		$(this).removeClass('notinview');
+		     		$(this).find('.skill-bar-percent').animate({
+						width:jQuery(this).closest('.skillbar').attr('data-percent')
+					},{
+						duration : 2000, //the duration in ms of the bar animation
+						easing: 'easeInOutExpo', //the easing effect of the animation
+						step: function(now, fx){
+							$(this).siblings('.pointerval').css('left',parseFloat(now, 10)+'%').find('.value').text(parseInt(now, 10)+'%');
+						}
+					});       
+		        }
+			}
+		});
+	});*/
 	
 	//Timeline jQuery functions
 	var $timeline_block = $('.cd-timeline-block');
