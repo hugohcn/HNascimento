@@ -207,53 +207,78 @@ section.about-me{
             max-width: 100%;
             .text-definition(1.7em, 400, Raleway, @dark-gray,none, center, 0.05em, 2.1176470588235294117647058823529em);
         }
+    }
+}
 
-        .experience-box{
+section.professional-skills{
+    max-width: 100%;
+    padding: @container-padding 0 0 0;
+    background-color: @gray-background;
+    .clearfix();
+
+    h3{
+        .page-title-style();
+    }
+
+    .skills-box{
+        .column(12);
+        margin: @container-padding 0 @container-padding 0;
+
+        #left-skills{
             .column(6);
-            margin: @container-padding 0 @container-padding 0;
-            text-align: center;
         }
 
-        .skills-box{
+        #right-skills{
             .column(6);
-            margin: @container-padding 0 @container-padding 0;
-            .skill-unit{
-                height: 50px;
-                max-width: 400px;
-                margin: 2em auto;
-            }
+        }
 
-            span{
-                display: block;
-                margin-bottom: 0.25em;
-                .text-definition(2.0em, 500, Advent Pro, @dark-blue, none, left, 0.05em, 1.2em);
-            }
+        .skill-unit{
+            height: 50px;
+            max-width: 550px;
+            margin: 2em auto;
+        }
 
-            progress{
-                width: 100%;
-                height: 15px;
-                border: 0;
-                
-                 -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
+        span{
+            display: block;
+            margin-bottom: 0.25em;
+            .text-definition(2.0em, 500, Advent Pro, @dark-blue, none, left, 0.05em, 1.2em);
+        }
 
+        progress{
+            width: 100%;
+            height: 15px;
+            border: 0;
+            
+             -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+
+            background: @dark-blue;
+            padding: 0;
+            color: @green;
+
+            &::-webkit-progress-bar{
                 background: @dark-blue;
                 padding: 0;
-                color: @green;
+            }
 
-                &::-webkit-progress-bar{
-                    background: @dark-blue;
-                    padding: 0;
-                }
-
-                &::-webkit-progress-value {
-                    background-color: @green;
-                }
+            &::-webkit-progress-value {
+                background-color: @green;
             }
         }
     }
 }
+
+section.experience-section{
+    width: 100%;
+    padding: @container-padding 0 @container-padding 0;
+    .clearfix();
+
+    h3{
+        .page-title-style();
+    }
+}
+    
 
 section.portfolio{
     width: 100%;
@@ -442,7 +467,7 @@ div.pm-content{
         margin-bottom: 30px;
 
         h3{
-            font-family: 'Raleway';
+            font-family: 'Advent pro';
             font-weight: 700;
             color: @green;
             text-align: left;
@@ -463,12 +488,20 @@ div.pm-content{
         }
     }
 
-    .project-images, .project-details{
-        .column(6);
+    .project-images{
+        .column(12);
+        margin: 0 0 2.5em 0;
     }
 
-    .project-images{
-       margin: 0 0 2.5em 0;
+    .project-details{
+        .column(12);
+        margin: 0 0 2.5em 0;
+        text-align: center;
+
+        img{
+            max-height:500px;
+            margin:0 auto;
+        }
     }
 
     .project-details{
@@ -484,7 +517,7 @@ div.pm-content{
         }
 
         p{
-            .text-definition(1.5em, 400, Raleway, @dark-blue, none, justify, 0.05em, 1.6em); 
+            .text-definition(1.6em, 400, Raleway, @dark-blue, none, justify, 0.05em, 1.8em); 
             padding-bottom: 1.3333333333333333333333333333333em;
         }
         
@@ -511,7 +544,7 @@ div.pm-content{
 
                 &:last-child{
                     //Considering the last child is the a element
-                    margin-top: 1.3333333333333333333333333333333em;
+                    margin-top: 1em;
                     font-weight: 600;
                 }
             }
@@ -565,7 +598,7 @@ footer{
 }
 /*End page Footer*/
 
-#projects-container{
+.projects-container{
     width: 92%;
     margin: 0 auto;
 
@@ -812,7 +845,7 @@ footer{
             padding-bottom: 0;
         }
         
-        #projects-container .item a.project-details-link img{
+        .projects-container .item a.project-details-link img{
             margin-top: 2em;
         }
 
@@ -870,9 +903,9 @@ footer{
         .project-images{
             margin: 0 0 2.5em 0;
 
-            .thumb-project-images{
+            /*.thumb-project-images{
                 display: none;
-            }
+            }*/
         }
     }
 
@@ -1247,7 +1280,11 @@ footer{
 
 /*Only for portfolio*/
 @media only screen and (min-width : 1000px) {
-    #projects-container{
+    .projects-container{
         max-width: 999px;
     }
+}
+
+.cd-timeline-content h2{
+    cursor: pointer;
 }

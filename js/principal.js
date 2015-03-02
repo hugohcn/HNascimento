@@ -19,23 +19,21 @@
 $(function(){
 	smoothScroll(650);
 
-	$('.know-more').on('click', function(event){
-		var descBox = $(this).parent().parent().find('.timeline-content');
+	/*$('.cd-timeline-content').on('click', function(event){
+		var descBox = $(this).find('.cd-timeline-content-wrapper');
 
 		if($(descBox).is(':hidden')) {
-			//controlling event button
-			$(this).text('[-]');
-
 			//Slide Down
 			$(descBox).slideDown(400);	
 		}else{
-			//controlling event button
-			$(this).text('[+]');
-
 			//Slide Up
 			$(descBox).slideUp(400);
 		}
 		
+	});*/
+	$('#cit-title,#accenture-title,#freelancer-title').on('click', function(event){
+		var detailContainer = $(this).parent().find('.cd-timeline-content-wrapper');
+		openjobDetails(detailContainer);
 	});
 
 	//On Contact Form Submit...
@@ -91,7 +89,7 @@ $(function(){
 	});
 
 	//Open Modal when click in project image
-	$('.project-details-link').on('click', function(event){
+	/*$('.project-details-link').on('click', function(event){
 		event.preventDefault();
 		$.pgwModal({
 			target: '#project-detail-box',
@@ -99,34 +97,28 @@ $(function(){
 			closable: true,
 			maxWidth: 1170,
 		});
-	});
-
+	});*/
+    
 	//Request project data, ehwn the modal start opening...
-	$(document).bind('PgwModal::Open', function() {
-	    //Request details
-	    //Create image carousel
-	    var owl = $(".project-images");
-
-		owl.owlCarousel({
-			responsive : {
-				320: {
-					items : 1
-				},
-				500: {
-					items: 2
-				},
-				750 : {
-					items: 3
-				},
-				940 : {
-					items: 1
-				}
-			}
-	  	});
-	});
-
+	/*$(document).bind('PgwModal::Open', function() {
+		//Portfolio Carousel
+		var owlOptions = {
+		    items:1,
+		    dots:false,
+		    nav:true,
+		    navText:["‹","›"],
+		    lazyLoad:true,
+		    loop:true
+		};
+	
+		$(".owlContainer").owlCarousel(owlOptions);	
+		$(".owlContainer").refresh();
+	});	*/
+	
+	
+	
 	//Portfolio Carousel
-	var owl = $("#projects-container");
+	var owl = $(".projects-container");
 
 	owl.owlCarousel({
 		items : 4,
@@ -153,6 +145,7 @@ $(function(){
         hideControlClasses: true, // true or false
         scrollLock: false // true or false
   	});
+
 
   	//Skills bar animation
   	/*$(window).scroll(function(){
@@ -209,4 +202,13 @@ function smoothScroll (duration) {
 	        }, duration);
 	    }
 	});
+}
+
+function openjobDetails(detailContainer){
+
+	if($(detailContainer).is(':hidden')) 
+		$(detailContainer).slideDown(500);	
+	else
+		$(detailContainer).slideUp(500);
+	
 }
