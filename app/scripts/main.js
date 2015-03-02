@@ -62,7 +62,7 @@ $(document).ready(function(){
 		    dataType: 'json',
 		    success: function(data){
 		    	//Show successfully send message
-		    	if(data.success == 'Email sent'){
+		    	if(data.success.toLowerCase() == 'email sent'){
 					$('#frmContact').each (function(){
 						this.reset();
 						$('.contact-status').text('Thank you - your e-mail has been sent.');
@@ -78,7 +78,6 @@ $(document).ready(function(){
 		    		setTimeout(function() {
 						$('.contact-status').fadeOut(600);
 			        }, 5000);
-		    		
 		    	}
 		    },
 		    error: function(error){
