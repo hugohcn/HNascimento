@@ -4,7 +4,7 @@
 # TEAM
 
     <name> -- <role> -- <twitter>
-    UI/UX Designer/Front-end Developer: Hugo Nascimento
+    UI/UX Designer: Hugo Nascimento
     Contact: hugohcn@gmail.com
     Twitter: @hugohcn
     From: Vitoria, Espírito Santo, Brazil
@@ -12,10 +12,11 @@
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3, jQuery, Modernizr, SASS
+    HTML5, CSS3
+    jQuery, Modernizr
 
 /* SITE */
-Last update: 2015/02/22
-Language: English / Portuguese
-Doctype: HTML5
-IDE: Sublime Text, Photoshop
+	Last update: 2014/12/14
+	Language: English / Portuguese
+	Doctype:HTML5
+	IDE: Sublime Text, Photoshop
